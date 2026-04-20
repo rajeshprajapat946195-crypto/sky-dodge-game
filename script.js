@@ -1,10 +1,18 @@
-let gameRunning = false;
-let startBtn = document.getElementById("startBtn");
-let score = 0;
-let scoreDisplay = document.getElementById("score");
-let player = document.getElementById("player");
-let gameArea = document.getElementById("gameArea");
+window.onload = function () {
+  let startBtn = document.getElementById("startBtn");
 
+  let gameRunning = false;
+  let obstacleInterval;
+
+  startBtn.addEventListener("click", () => {
+    if (!gameRunning) {
+      gameRunning = true;
+      startBtn.style.display = "none";
+
+      obstacleInterval = setInterval(createObstacle, 1500);
+    }
+  });
+};
 let playerX = 130;
 
 document.addEventListener("keydown", (e) => {
