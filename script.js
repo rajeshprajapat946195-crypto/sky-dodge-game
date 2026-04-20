@@ -1,3 +1,5 @@
+let gameRunning = false;
+let startBtn = document.getElementById("startBtn");
 let score = 0;
 let scoreDisplay = document.getElementById("score");
 let player = document.getElementById("player");
