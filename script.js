@@ -64,6 +64,16 @@ startBtn.addEventListener("click", () => {
   if (!gameRunning) {
     gameRunning = true;
     startBtn.style.display = "none";
-    setInterval(createObstacle, 1500);
+   let gameRunning = false;
+let obstacleInterval;
+
+startBtn.addEventListener("click", () => {
+  if (!gameRunning) {
+    gameRunning = true;
+    startBtn.style.display = "none";
+
+    obstacleInterval = setInterval(createObstacle, 1500);
+  }
+}); 
   }
 });
