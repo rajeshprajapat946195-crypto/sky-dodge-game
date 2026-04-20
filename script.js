@@ -37,8 +37,12 @@ function createObstacle() {
       obsRect.left < playerRect.right &&
       obsRect.right > playerRect.left
     ) {
-      document.body.innerHTML = "<h1>Game Over</
-        h1><p>Your Score: " + score + "</p>";
+     document.body.innerHTML = `
+  <h1>Game Over</h1>
+  <p>Your Score: ${score}</p>
+  <button onclick="location.reload()">Restart</button>
+`; 
+  
     }
 
     if (obsTop > 400) {
@@ -56,4 +60,10 @@ function createObstacle() {
   }, 50);
 }
 
-setInterval(createObstacle, 1500);
+startBtn.addEventListener("click", () => {
+  if (!gameRunning) {
+    gameRunning = true;
+    startBtn.style.display = "none";
+    setInterval(createObstacle, 1500);
+  }
+});
