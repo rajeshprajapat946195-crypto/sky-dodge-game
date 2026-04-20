@@ -1,3 +1,5 @@
+let score = 0;
+let scoreDisplay = document.getElementById("score");
 let player = document.getElementById("player");
 let gameArea = document.getElementById("gameArea");
 
@@ -33,14 +35,22 @@ function createObstacle() {
       obsRect.left < playerRect.right &&
       obsRect.right > playerRect.left
     ) {
-      alert("Game Over!");
-      location.reload();
+      document.body.innerHTML = "<h1>Game Over</
+        h1><p>Your Score: " + score + "</p>";
     }
 
     if (obsTop > 400) {
       clearInterval(fall);
       obs.remove();
-    }
+      setInterval(() => {
+  score++;
+  scoreDisplay.innerText = "Score: " + score;
+}, 1000);
+    document.addEventListener("touchmove", (e) => {
+  let touchX = e.touches[0].clientX;
+  player.style.left = (touchX - 20) + "px";
+});
+    
   }, 50);
 }
 
