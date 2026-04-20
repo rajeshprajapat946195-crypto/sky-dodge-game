@@ -37,5 +37,12 @@ h1 {
 #gameArea {
   background: linear-gradient(black, darkblue);
 }
-
+#startBtn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: cyan;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
 
