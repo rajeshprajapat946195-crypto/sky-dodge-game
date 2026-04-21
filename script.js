@@ -23,6 +23,23 @@ document.addEventListener("keydown", (e) => {
     player.style.left = playerX + "px";
 });
 
+// Mobile touch control
+document.addEventListener("touchstart", (e) => {
+    if (!gameRunning) return;
+
+    let touchX = e.touches[0].clientX;
+    let screenWidth = window.innerWidth;
+
+    if (touchX < screenWidth / 2 && playerX > 0) {
+        // Left side touch
+        playerX -= 20;
+    } else if (touchX > screenWidth / 2 && playerX < 260) {
+        // Right side touch
+        playerX += 20;
+    }
+
+    player.style.left = playerX + "px";
+});
 // Create obstacle
 function createObstacle() {
     if (!gameRunning) return;
