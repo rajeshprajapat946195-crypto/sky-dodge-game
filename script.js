@@ -4,7 +4,8 @@ let gameArea = document.getElementById("gameArea");
 let scoreDisplay = document.getElementById("score");
 let startBtn = document.getElementById("startBtn");
 
-let playerX = 130;
+let playerX = window.innerWidth / 2 - 25;
+player.style.left = playerX + "px";
 let score = 0;
 let gameRunning = false;
 
