@@ -29,3 +29,33 @@ body {
     position: absolute;
     top: 0;
 }
+body {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+}
+
+#gameArea {
+    width: 100vw;   /* full mobile width */
+    height: 100vh;  /* full mobile height */
+    background: black;
+    position: relative;
+    overflow: hidden;
+}
+
+#player {
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: absolute;
+    bottom: 20px;
+    left: 40%;
+}
+
+.obstacle {
+    width: 40px;
+    height: 40px;
+    background: yellow;
+    position: absolute;
+    top: 0;
+}
