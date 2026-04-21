@@ -93,3 +93,16 @@ startBtn.addEventListener("click", () => {
 
     setInterval(createObstacle, 1500);
 });
+function moveLeft() {
+    if (playerX > 0) {
+        playerX -= 20;
+        player.style.left = playerX + "px";
+    }
+}
+
+function moveRight() {
+    if (playerX < 260) {
+        playerX += 20;
+        player.style.left = playerX + "px";
+    }
+}
