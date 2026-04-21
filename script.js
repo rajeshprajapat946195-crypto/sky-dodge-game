@@ -1,4 +1,5 @@
-let player = document.getElementById("player");
+
+let  player = document.getElementById("player");
 let gameArea = document.getElementById("gameArea");
 let scoreDisplay = document.getElementById("score");
 let startBtn = document.getElementById("startBtn");
